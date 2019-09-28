@@ -1,0 +1,151 @@
+body {
+  height: 100%;
+  color: black;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.project-section {
+  width: 100%;
+  color: black;
+  background: url("/images/cosmos-noclouds.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-section > * {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  height: 100vh;
+}
+
+.project-main {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 0.4rem black;
+  overflow: hidden;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .project-main {
+    flex-direction: column;
+  }
+}
+
+.project-section-title {
+  font-size: 3em;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-top: calc(1.618rem * 2);
+  text-align: center;
+  color: white;
+}
+
+.project-banner-wrapper {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-banner {
+  background: url("./images/destroygamesbanner.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  margin-bottom: 1.618rem;
+  width: 100%;
+  height: 100%;
+}
+
+.project-heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.project-title {
+  padding-bottom: 4rem;
+  font-size: 3em;
+  color: white;
+}
+
+.project-date {
+  font-size: 1em;
+  margin-left: 4em;
+}
+
+.project-heading {
+  font-size: 1.6em;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1.2em;
+}
+
+.project-stack {
+  margin-top: calc(1.618rem * 2);
+  margin-bottom: 1.618rem;
+  border-radius: 1rem;
+  max-width: 700px;
+}
+
+.project-stack-title {
+  margin-bottom: 1.618rem;
+  font-size: 1.6em;
+}
+
+.project-stack-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+
+.project-stack-list > li {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.project-description-wrapper {
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 700px;
+}
+
+.project-link {
+  height: inherit;
+  width: inherit;
+  background: black;
+}
+
+.introduction-description-summary {
+  margin-top: 1.618rem;
+  margin-top: calc(1.618rem * 2);
+  font-size: 1.5em;
+  text-align: center;
+}
