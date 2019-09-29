@@ -200,6 +200,10 @@ html {
 .button:hover {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
+    /* font-weight: bold; */
+    /* box-shadow: 0 0 1rem #f4511e; */
+    background: white;
+    color: #f4511e;
 
 }
 
@@ -207,12 +211,15 @@ html {
 content: '\00bb';
 position: absolute;
 opacity: 0;
-right: 5px;
+right: -25%;
+top: 25%;
 transition: 0.5s;
 }
 
 .button:hover span {
-padding-right: 20px;
+padding-right: 15px;
+padding-bottom: -15px;
+margin-right: 10px;
 }
 
 .button:hover span:after {
