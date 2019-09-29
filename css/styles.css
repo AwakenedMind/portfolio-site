@@ -28,10 +28,6 @@ html {
   position: static !important;
 }
 
-.introduction-main {
-  /* background-color: #020E23; */
-}
-
 .nav {
   margin-top: 1.618rem;
   margin-right: 1.618rem;
@@ -59,9 +55,24 @@ html {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 425px) {
+  .introduction-description {
+      font-size: 0.6em;
+      line-height: 1.618;
+  }
+}
+
+
+
 .introduction-description-name {
   font-size: 6em;
   text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  .introduction-description-name {
+      font-size: 5em;
+  }
 }
 
 .introduction-description-subheading {
@@ -70,13 +81,22 @@ html {
   text-align: center;
 }
 
+@media screen and (max-width: 425px) {
+  .introduction-description-subheading {
+      font-size: 2em;
+      line-height: 1.618;
+  }
+}
+
 .introduction-description-links-wrapper {
   width: 100vw;
   height: 100px;
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  /* background: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .introduction-description-links {
@@ -84,13 +104,11 @@ html {
   flex-wrap: nowrap;
   justify-content: center;
   list-style: none;
-  margin-top: 1.618rem;
-  margin-top: calc(1.618rem * 2);
-  width: 100%;
-  position: absolute;
+  margin: 0 auto;
+  width: fit-content;
   bottom: 0;
-  margin-bottom: 1.618rem;
   text-transform: uppercase;
+  position: relative;
 }
 
 .introduction-description-links li {
@@ -98,11 +116,53 @@ html {
   margin-right: 1.618rem;
   z-index: 9999;
   font-size: 1.4em;
+  position: relative;
+}
+
+@media screen and (max-width: 425px) {
+  .introduction-description-links li {
+      margin-left: calc(1.618rem / 3);
+      font-size: 1em;
+      z-index: 9999;
+
+  }
+}
+
+.introduction-description-links a {
+  letter-spacing: 0.025em;
+}
+
+@media screen and (max-width: 425px) {
+  .introduction-description-links a {
+      font-size: 1em;
+  }
+}
+
+.introduction-description-links li a:after {
+  content: "";
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scaleX(0.6);
+  transform: scaleX(0.6);
+  -webkit-transition: .3s;
+  transition: .3s
+}
+
+.introduction-description-links li a:hover:after {
+  background-color: #f4511e;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1)
 }
 
 .introduction-description-links li:hover {
   transform: scale(1.1);
-  color: #1B7D78;
 }
 
 .introduction-description-links li a {
@@ -110,19 +170,55 @@ html {
   color: inherit;
 }
 
-.introduction-description-button {
+.button {
   z-index: 9999;
-  margin-top: 1.618rem;
+  position: relative;
+  border-radius: 4px;
+  background-color: #cd390a;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 210px;
+  transition: all 0.5s;
+  cursor: pointer;
   margin-top: calc(1.618rem * 2);
-  display: block;
-  width: 200px;
-  padding: 1rem;
-  font-size: 2em;
-  border-radius: 40px 40px 40px 40px;
-  color: #1A7D78;
-  background-color: #FAFAFA;
-  box-shadow: 0 0 0.6rem #061c1a;
+  display: flex;
+  justify-content: center
 }
+
+@media screen and (max-width: 425px) {
+  .button {
+    width: 150px;
+    padding: 10px;
+      font-size: 2em;
+      line-height: 1.618;
+  }
+}
+
+.button:hover {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+
+}
+
+/* .button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+right: 5px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 20px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+} */
 
 .project-section {
   width: 100%;
@@ -285,5 +381,9 @@ html {
   margin-top: calc(1.618rem * 2);
   font-size: 1.5em;
   text-align: center;
+  margin-left: 1.618rem;
+  margin-right: 1.618rem;
 }
+
+
 
